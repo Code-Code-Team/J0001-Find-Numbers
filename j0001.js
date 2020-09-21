@@ -1,7 +1,7 @@
 let inpNumber;
 let counter = 0;
 
-let number = 30 //Math.floor((Math.random() * 100) + 1);
+let number = Math.floor((Math.random() * 100) + 1);
 
 document.getElementById("check").addEventListener("click", function(){
 
