@@ -26,7 +26,7 @@ document.getElementById("inp_number").addEventListener("keyup",function(event){
             alert("You are actually talented You guess after"+ counter+"times")
             // document.getElementById("answer").innerHTML= "You are actually talented You guess after"+ counter+"times";
             
-            var onceMore = confirm("Dou you wanna play again");
+            var onceMore = confirm("Do you wanna play again");
             if (onceMore == true){
                 counter = 0;
                 number = Math.floor((Math.random()*100)+1);
@@ -40,7 +40,8 @@ document.getElementById("inp_number").addEventListener("keyup",function(event){
             }
         }
         else if (inpNumber.indexOf('.') != -1 || inpNumber.indexOf(',') != -1){alert("This is not a natural number")}
-        else if (inpNumber > 100 ){alert("higher than 100")}
+        else if (inpNumber > 100 || inpNumber < 0 ){alert("between 0 and 100")}
+        else if (isNaN(inpNumber) || inpNumber==""){alert("Not a number")}
         else if (inpNumber > number){document.getElementById("answer").innerHTML="I am thinking about lower number ";}
         else if (inpNumber < number){document.getElementById("answer").innerHTML="I am thinking about higher number ";}
     
