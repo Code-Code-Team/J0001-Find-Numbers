@@ -1,32 +1,39 @@
 let inpNumber;
 let counter = 0;
-
 let number = Math.floor((Math.random() * 100) + 1);
+const kahoot = document.getElementById("kahoot");
+const final = document.getElementById("final");
 
 document.getElementById("check").addEventListener("click", function(){
-
+    kahoot.play()
     check_number();
-
 });
 
 document.getElementById("inp_number").addEventListener("keyup",function(event){
     if (event.which === 13){
-        
+        kahoot.play()
         check_number();
     };
 
 });
-
     function check_number(){
         counter++
         document.getElementById("inp_counter").innerHTML= "Try :" +counter;
         inpNumber = document.getElementById("inp_number").value;
         
         if (inpNumber == number){
-            alert("You are actually talented You guess after"+ counter+"times")
-            // document.getElementById("answer").innerHTML= "You are actually talented You guess after"+ counter+"times";
-            
-            var onceMore = confirm("Do you wanna play again");
+            kahoot.pause()
+            if(counter>5){
+                document.getElementById("answer").innerHTML= "You guess after"+ counter+"times";
+            }else{
+                setTimeout(() => {alert("You are actually talented You guess after"+ counter+"times")
+                }, 100); 
+            }
+            final.play()
+            setTimeout(() => {
+                var onceMore = confirm("Do you wanna play again");
+            },1000) 
+                
             if (onceMore == true){
                 counter = 0;
                 number = Math.floor((Math.random()*100)+1);
@@ -46,6 +53,9 @@ document.getElementById("inp_number").addEventListener("keyup",function(event){
         else if (inpNumber < number){document.getElementById("answer").innerHTML="I am thinking about higher number ";}
     
     document.getElementById("inp_number").value= "";
+    
+    
+
     }
     
 
