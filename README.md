@@ -21,11 +21,11 @@ Project aims to create find the number game (between 0 to 100).
 
 ## Expected Outcome
 
-![Project 001 Snapshot](Project_001_.png)
+![Project 001 Snapshot](./images/Screen%20Shot%202020-10-16%20at%2015.20.53.png)
 
 ## Objective
 
-Build a Find the Number Game (Between 0 to 100) that is functionally similar to this: [Find the Number Game]( https://aaron-clarusway.github.io/findnumber/)
+Build a Find the Number Game (Between 0 to 100) that is functionally similar to this: [Find the Number Game](https://code-code-team.github.io/P0001J-Find-Numbers/)
 
 ### At the end of the project, following topics are to be covered;
 
